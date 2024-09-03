@@ -1,0 +1,278 @@
+body, html {
+    background: rgba(80,80,104,0.8);
+    height: 100%;
+  width: 100%;
+}
+
+.container {
+
+    filter: alpha(opacity=40);
+background-position: right;
+    background-size: 40% auto;
+box-shadow: 2px 2px 55px 20px rgba(20,20,44,0.3);
+  height: auto;
+text-align: center;
+    margin-top: 20px;
+margin-left: auto;
+    margin-right: auto;
+margin-bottom: 15px;
+  padding: 20px 20px;
+
+border: 2px solid transparent;
+  background: rgba(60,60,84,0.8);
+
+
+    border-radius: 0px;
+
+}
+
+p {
+font-family: "Yu Gothic UI Light";
+    color: darkgrey;
+    margin-left: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+h4{
+  font-family: "Yu Gothic UI Light";
+    color: darkgrey;
+    font-size: 2rem;
+}
+
+textarea {
+    height: 200px;
+    width: 400px;
+    background: rgba(155,159,155,0.67);
+}
+
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+
+  color: darkgrey;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+
+  color: #9b9b9b;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+
+    color: darkgrey;
+    font-weight:200;
+  }
+  padding-bottom: 6px;
+
+  border-width: 2px;
+  border-image: linear-gradient(to right, grey, dimgrey);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field{
+  &:required,&:invalid { box-shadow:none; }
+}
+/* demo */
+body {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.5rem;
+
+}
+
+input {
+  background: rgba(160,160,184,0.8);
+
+  text-decoration: none;
+  color: rgba(60,60,84,0.8);
+  font-size: 1.2rem;
+text-align: center;
+  border: none;
+  border-radius: 15px;
+  height: 40px;
+}
+input:hover {
+    color: rgba(40,40,64,0.67);
+  background: rgba(180,180,204,0.8);
+}
+
+
+.hoja{
+color: darkgrey;
+position:absolute;
+padding-left: 42px;
+width:70px;
+height:70px;
+text-align:center;
+font-family: "Yu Gothic UI Light";
+font-size:25px;
+
+-webkit-font-smoothing: antialiased;
+}
+
+.hoja:after,
+.hoja:before{
+content:"";
+border-radius:100%;
+position:absolute;
+top:0;
+left:0;
+width:50%;
+height:50%;
+transform-origin:center center;
+}
+
+.hoja:after{
+box-shadow: inset 0 5px 0 rgba(150, 200, 250, 0.6),
+inset 5px 0 0 rgba(100, 150, 250, 0.6),
+inset 0 -5px 0 rgba(100, 120, 250, 0.6),
+inset -5px 0 0 rgba(80, 100, 250, 0.6);
+animation: rotar 2s -0.5s linear infinite;
+}
+
+.hoja:before{
+box-shadow: inset 0 5px 0 rgba(100, 150, 200, 0.6),
+inset 5px 0 0 rgba(205, 120, 200, 0.6),
+inset 0 -5px 0 rgba(250, 100, 200, 0.6),
+inset -5px 0 0 rgba(230, 80, 250, 0.6);
+animation: rotarIz 2s -0.5s linear infinite;
+}
+
+@keyframes rotar{
+0%{
+transform:rotateZ(0deg) scaleX(1) scaleY(1);
+}
+50%{
+transform:rotateZ(180deg) scaleX(0.82) scaleY(0.95);
+}
+100%{
+transform:rotateZ(360deg) scaleX(1) scaleY(1);
+}
+}
+
+@keyframes rotarIz{
+0%{
+transform:rotateZ(0deg) scaleX(1) scaleY(1);
+}
+50%{
+transform:rotateZ(-180deg) scaleX(0.95) scaleY(0.85);
+}
+100%{
+transform:rotateZ(-360deg) scaleX(1) scaleY(1);
+}
+}
+
+@media (min-width: 768px) {
+    .container, .container-md, .container-sm {
+        max-width: 920px;
+    }
+}
+
+h3 {
+    font-family: "Yu Gothic UI Light";
+    color: darkgrey;
+    font-size: 1.2rem;
+    text-align: center;
+}
+p1 {
+    font-family: "Yu Gothic UI Light";
+    color: darkgrey;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.loader {
+
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  perspective: 800px;
+}
+
+.inner {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.inner.one {
+  left: 0%;
+  top: 0%;
+  animation: rotate-one 1s linear infinite;
+  border-bottom: 3px solid;
+
+}
+
+.inner.two {
+  right: 0%;
+  top: 0%;
+  animation: rotate-two 1s linear infinite;
+  border-right: 3px solid #EFEFFA;
+}
+
+.inner.three {
+  right: 0%;
+  bottom: 0%;
+  animation: rotate-three 1s linear infinite;
+  border-top: 3px solid #EFEFFA;
+}
+
+@keyframes rotate-one {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-two {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-three {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
